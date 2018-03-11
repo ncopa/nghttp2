@@ -438,6 +438,7 @@ int submit_request(HttpClient *client, const Headers &headers, Request *req) {
                                {":path", path},
                                {":scheme", scheme.str()},
                                {":authority", client->hostport},
+                               {":protocol", "websocket"},
                                {"accept", "*/*"},
                                {"accept-encoding", "gzip, deflate"},
                                {"user-agent", "nghttp2/" NGHTTP2_VERSION}};
